@@ -1,0 +1,206 @@
+/* =============== RESET CSS =============== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter',sans-serif;
+}
+
+/* =============== VARIABLES =============== */
+
+:root {
+    --fs-12: 1.2rem;
+    --fs-14: 1.4rem;
+    --fs-16: 1.6rem;
+    --fs-24: 2.4rem;
+    --fs-34: 3.4rem;
+
+    --fw-400: 400;
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+
+    --text-color-defaul: #fff;
+    --text-color-green: #81FBB8;
+
+    --bg-color-main: #292738;
+    --bg-color-cards: #363447;
+    --bg-color-circle: #4A4556;
+
+}
+
+/* =============== GENERIC STYLES =============== */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--bg-color-main);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    user-select: none;
+    overflow: hidden;
+}
+
+/* =============== UTILITY CLASSES =============== */
+
+.flex {
+    background-color: var(--bg-color-cards);
+    width: 29.6rem;
+    height: 37.9rem;
+    border-radius: 1.6rem;
+    padding: 2.9rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardsShadow {
+    box-shadow: 2rem 1.5rem 2.5rem var(--bg-color-main);
+}
+
+/* =============== ANIMATION =============== */
+
+@keyframes reveal1 {
+    from {
+        transform: translate(-200rem);
+    }
+    to {
+        transform: translate(0rem);
+    }
+}
+
+@keyframes reveal2 {
+    from {
+        transform: translate(200rem);
+    }
+    to {
+        transform: translate(0rem);
+    }
+}
+
+/* =============== DASHBOARD CARDS =============== */
+
+.content__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+    text-align: center;
+    animation: reveal1 1.5s;
+}
+
+.content__card h2 {
+    color: var(--text-color-defaul);
+    font-size: var(--fs-24);
+    font-weight: var(--fw-600);
+}
+
+.content__card p {
+    color: var(--text-color-defaul);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-500);
+
+}
+
+.content__text {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.content__text p > .before--1::before {
+    content: '';
+    display: inline-block;
+    background-color: var(--bg-color-circle);
+    border-radius: 100vmax;
+    margin-right: .3rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.content__text p > .before--2::before {
+    content: '';
+    background: url(../img/Ellipse1.svg) no-repeat center;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .3rem;
+    border-radius: 100vmax;
+}
+
+.content__text p > .before--3::before {
+    content: '';
+    display: inline-block;
+    background-color: var(--bg-color-circle);
+    border-radius: 100vmax;
+    margin-right: .3rem;
+    width: 1rem;
+    height: 1rem;
+}
+
+.content__text p > .before--4::before {
+    content: '';
+    background: url(../img/Ellipse2.svg) no-repeat center;
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin-right: .3rem;
+    border-radius: 100vmax;
+}
+
+/* =============== DASHBOARD GRAPHIC =============== */
+
+.content__infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4rem;
+    background-color: var(--bg-color-cards);
+    border-radius: 1.6rem;
+    padding: 2.9rem 4.8rem;
+    animation: reveal2 1.5s;
+}
+
+.content__sales {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+}
+
+.content__sales h2 {
+    color: var(--text-color-defaul);
+    font-size: var(--fs-24);
+    font-weight: var(--fw-600);
+}
+
+.content__sales p {
+    color: var(--text-color-defaul);
+    font-size: var(--fs-14);
+    font-weight: var(--fw-500);
+    padding-bottom: .7rem;
+}
+
+.content__plus p::before {
+    content: '';
+    display: inline-block;
+    background: url(../img/plus.svg) no-repeat center;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: .3rem;
+}
+
+.content__minus p::before {
+    content: '';
+    display: inline-block;
+    background: url(../img/minus.svg) no-repeat center;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: .3rem;
+}
+
+/* =============== DASHBOARD ANIMATION =============== */
+
